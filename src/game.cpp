@@ -10152,7 +10152,7 @@ bool game::handle_liquid(item &liquid, bool from_ground, bool infinite, item *so
         return false;
     }
 
-    if( vehicle_near( liquid.type->id ) && query_yn(_("Refill vehicle?")) ) {
+    if( vehicle_near( liquid.type->id ) && query_yn(_("Refill vehicle?")) && cont == NULL) {
         tripoint vp;
         refresh_all();
         if (!choose_adjacent(_("Refill vehicle where?"), vp)) {
